@@ -28,7 +28,8 @@ const Contact = () => {
           <div>
             <h3 className="text-lg font-medium">Address:</h3>
             <p className="mt-1 text-gray-300">
-              Malviya Nagar <br /> Indore,  452010           </p>
+              Pune, Maharashtra, India
+            </p>
           </div>
         </div>
         <div>

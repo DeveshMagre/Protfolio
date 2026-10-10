@@ -1,50 +1,45 @@
 import React from "react";
-import { FaVectorSquare } from "react-icons/fa";
-import { FaPenToSquare } from "react-icons/fa6";
-import { BiSolidDollarCircle } from "react-icons/bi";
+import { FaLock, FaTruck, FaShoppingCart } from "react-icons/fa";
+import { FaShieldHalved } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { SlideUp } from "../../animation/animate";
-
-import chat from "../../assets/chat.png"; // Default image
-import ecommerceImg from "../../assets/ecommerce.png"; // Add specific images for projects
-import portfolioImg from "../../assets/portfolio.png"; // Add specific images for projects
 
 const ProjectCard = [
   {
     id: 1,
-    title: "E-commerce Website",
-    TechStack: "React, Node, Express, MongoDB",
+    title: "SmartLock",
+    TechStack: "React.js, Node.js, Express.js, MongoDB, PostgreSQL, JWT",
     description:
-      "Results-driven professional with expertise in managing and delivering projects on time, within scope, and on budget, ensuring high-quality outcomes.",
-    icon: <FaVectorSquare />,
-    image: ecommerceImg, 
-    liveDemoLink: "https://e-commerce-rust-theta-79.vercel.app",
-    githubLink: "https://github.com/DeveshMagre/E-commerce", // Replace with the actual GitHub repo link
+      "IoT smart lock management platform for devices, users, and access permissions. Secure REST APIs with JWT and RBAC, plus real-time device status and activity dashboards that improved monitoring speed by 45%.",
+    icon: <FaLock />,
     delay: 0.2,
   },
   {
     id: 2,
-    title: "Real Time Chat Application",
-    TechStack: "React, socket.io, Firebase",
+    title: "E-Seal",
+    TechStack: "React.js, Node.js, Express.js, MongoDB",
     description:
-      "A messaging app for seamless communication, real-time chats, and easy sharing of media and files",
-    icon: <FaPenToSquare />,
-    image: chat, 
-    liveDemoLink: "https://astounding-dusk-114565.netlify.app", // Replace with the actual live demo link
-    githubLink: "https://github.com/DeveshMagre", // Replace with the actual GitHub repo link
-    delay: 0.4,
+      "Electronic seal tracking system with responsive dashboards for seal status, tamper alerts, and shipment events. Backend APIs and schemas improved query performance by 30% and notifications for operations teams.",
+    icon: <FaShieldHalved />,
+    delay: 0.3,
   },
   {
     id: 3,
-    title: "Portfolio",
-    TechStack: "React, Framer-motion, Tailwind",
+    title: "LogiSmart",
+    TechStack: "MERN, REST APIs, Indexing, Pagination",
     description:
-      "Designed and developed a dynamic, user-friendly web application using React, featuring responsive design, interactive components, and seamless state management for an enhanced user experience.",
-    icon: <BiSolidDollarCircle />,
-    image: portfolioImg, // New field for project image
-    liveDemoLink: "#", // Replace with the actual live demo link
-    githubLink: "https://github.com/DeveshMagre/Protfolio", // Replace with the actual GitHub repo link
-    delay: 0.6,
+      "Logistics and fleet management platform covering shipment tracking, trip management, and reporting. API and database optimizations improved performance by 40%, delivered with QA, product, and hardware teams.",
+    icon: <FaTruck />,
+    delay: 0.4,
+  },
+  {
+    id: 4,
+    title: "ProcMart",
+    TechStack: "React.js, Node.js, Express.js, MongoDB, REST APIs",
+    description:
+      "Procurement e-commerce platform with catalog, search, cart, and order management. Reusable React components, vendor/buyer roles, admin panel, and authentication improved order processing speed by 35%.",
+    icon: <FaShoppingCart />,
+    delay: 0.5,
   },
 ];
 
@@ -62,8 +57,7 @@ const Projects = () => {
             PROJECTS
           </motion.h1>
         </div>
-        {/* card section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {ProjectCard.map((card) => {
             return (
               <motion.div
@@ -74,26 +68,11 @@ const Projects = () => {
                 className="space-y-4 border-[1px] border-black/30 px-6 py-12 hover:bg-black hover:text-white hover:shadow-[7px_7px_0px_0px_#6c6c6c] duration-300"
               >
                 <span className="inline-block text-xl border-[1px] border-black rounded-full p-3">
-                  <img src={card.image} className="w-10 h-10 rounded-full" alt="Project" />
+                  {card.icon}
                 </span>
                 <p className="text-2xl font-bold font-serif">{card.title}</p>
                 <p className="text-sm font-bold font-serif">{card.TechStack}</p>
                 <p className="text-gray-400 text-xs">{card.description}</p>
-
-                <div className="space-x-4">
-                  <a
-                    href={card.liveDemoLink}
-                    className="inline-block border-b border-black"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href={card.githubLink}
-                    className="inline-block border-b border-black"
-                  >
-                    GitHub
-                  </a>
-                </div>
               </motion.div>
             );
           })}

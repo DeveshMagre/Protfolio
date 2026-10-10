@@ -18,7 +18,6 @@ const About = () => {
           </motion.h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {/* Left Section */}
           <div className="space-y-5 flex justify-center flex-col xl:max-w-[500px]">
             <motion.p
               variants={SlideUp(0.4)}
@@ -26,7 +25,13 @@ const About = () => {
               whileInView="animate"
               className="text-gray-500 text-sm leading-7"
             >
-              Hello! I am Devesh Magre, a Full Stack Developer with experience in front-end and back-end technologies, including HTML, CSS, JavaScript, React, MongoDB, Express, Node.js, and DevOps, delivering end-to-end web application solutions.
+              Hello! I am Devesh Magre, a Full Stack Developer (MERN) with 2+
+              years of hands-on experience in React.js, Node.js, Express.js,
+              MongoDB, JavaScript, and REST APIs. I have built SmartLock,
+              E-Seal, LogiSmart, and ProcMart, covering JWT authentication,
+              role-based access control, real-time dashboards, and database
+              optimization. I am strong in Git, Agile, and cross-team
+              collaboration.
             </motion.p>
             <motion.div
               variants={SlideUp(0.6)}
@@ -34,20 +39,35 @@ const About = () => {
               whileInView="animate"
               className="space-y-4"
             >
-              {/* Address, Education, and Hobbies */}
               <div>
                 <p className="text-lg font-bold">Education:</p>
                 <ul className="text-gray-500 text-sm space-y-2">
                   <li>
-                    <span className="font-medium">Secondary Education:</span> Kendriya Vidhalaya Burhanpur, 72% (2018)
+                    <span className="font-medium">B.Tech:</span> Computer Science
+                    Engineering, Malwa Institute of Technology, Indore (2024) ·
+                    CGPA: 7.2
                   </li>
                   <li>
-                    <span className="font-medium">Higher Secondary Education:</span> New Vision, 74% (2020)
+                    <span className="font-medium">Higher Secondary:</span> New
+                    Vision, 74% (2020)
                   </li>
                   <li>
-                    <span className="font-medium">B.Tech:</span> Computer Science, Malwa Institute Of Technology (2024)
+                    <span className="font-medium">Secondary:</span> Kendriya
+                    Vidyalaya Burhanpur, 72% (2018)
                   </li>
                 </ul>
+              </div>
+              <div>
+                <p className="text-lg font-bold">Certifications:</p>
+                <p className="text-gray-500 text-sm">
+                  Namaste React — Namaste Dev (Akshay Saini)
+                </p>
+              </div>
+              <div>
+                <p className="text-lg font-bold">Location:</p>
+                <p className="text-gray-500 text-sm">
+                  Pune, Maharashtra, India
+                </p>
               </div>
               <div>
                 <p className="text-lg font-bold">Hobbies:</p>
@@ -57,7 +77,6 @@ const About = () => {
               </div>
             </motion.div>
           </div>
-          {/* Right Section */}
           <div className="flex flex-col justify-center">
             <motion.img
               initial={{ x: 100, opacity: 0 }}
